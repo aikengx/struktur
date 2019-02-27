@@ -1,0 +1,29 @@
+<h2>Edit Manufacturer</h2>
+<br>
+<form action="/manufacturer/update/{{hbsManufacturer._id}}" method="POST" id="form-container" enctype="multipart/form-data">
+  <label for="name">Manufacturer</label>
+  <input id="name" type="text" name="name" value="{{hbsManufacturer.name}}">
+  <br><br>
+  <label for="website">URL</label>
+  <input id="website" type="url" name="website" value="{{hbsManufacturer.website}}" size="30">
+  <br><br>
+  <img src="{{hbsManufacturer.imgPath}}" alt="" height="auto" width="100">
+  <br><br>
+  <label for="logo">Upload logo</label>
+  <br>
+  <input id="logo" type="file" name="logo" >
+  <br><br>
+  <div>
+  {{#if message}}
+    <div class="error-message">
+      <span id="message">{{ message }}</span>
+    </div>
+  {{/if}}
+  </div>
+  <br>
+  <button>Edit Manufacturer</button>
+</form>
+<br><br>
+<div>
+  <p id="backhome">Back to <a href="/home">Home</a></p>
+</div>

@@ -1,0 +1,66 @@
+
+<h2>Edit Product</h2>
+<br>
+<form action="/product/add" method="POST" id="form-container">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="Product Name" size="45" value="{{hbsProduct.name}}" required>
+  <br><br>
+  <label for="manufacturer">Manufacturer</label>
+  <br>
+  <select id="manufacturer" name="manufacturer" onchange="populate(this.id)" required>
+    {{#each list}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <br><br>
+  <label for="system">System</label>
+  <br>
+  <select id="system" name="system" required>
+    {{#each list2}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <br><br>
+  <label for="url">URL</label>
+  <input id="url" type="url" name="url" placeholder="http://www.xyz.com/product" size="47" value="{{hbsProduct.url}}" required>
+  <br><br>
+  <label for="imgUrl">Image URL</label>
+  <input id="imgUrl" type="url" name="imgUrl" placeholder="http://www.xyz.com/product.jpg" size="41" value="{{hbsProduct.imgUrl}}" required>
+  <br><br>
+  <label for="partNum">Part Number</label>
+  <input id="partNum" type="text" name="partNum" placeholder="Part No." size="39" value="{{hbsProduct.part_number}}" required>
+  <br><br>
+  <label for="description">Description</label>
+  <br>
+  <textarea rows="3" cols="50" id="description" type="text" name="description" placeholder="Product Description" required>{{hbsProduct.description}}</textarea>
+  <br><br>
+  </div>
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <div>
+  <button>Edit Product</button>
+</form>
+<br><br>
+<div>
+  <p id="backhome">Back to <a href="/home">Home</a></p>
+</div>
+
+
+
+<script>
+  //get all the data 
+var list = JSON.parse('{{{json list2}}}');
+
+function populate(list1) {
+  let man = document.getElementById('manufacturer').value; 
+  let html = ''
+  list.forEach((eachSystem)=>{
+    if(eachSystem.manufacturer === man){
+      html += `<option value="${eachSystem.name}">${eachSystem.name}</option>`
+    }
+  })
+  $('#system').html(html)
+  
+}
+</script>

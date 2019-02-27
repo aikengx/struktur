@@ -1,0 +1,125 @@
+// Default values:
+/*
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+*/
+/*
+.navbar {
+  margin-top: 5vh;
+}
+*/
+#backhome {
+  font-size: 0.8rem;
+}
+
+#message {
+  font-weight: bold;
+}
+
+#chgpass, #logout, .fa-plus-circle {
+  color: greenyellow;
+}
+
+//Correct space under footer:
+#content {
+  //max-height: 90vh;
+  flex: 1 0 auto;
+}
+
+#datetime {
+  float: center;
+  padding-left: 20px;
+}
+
+#social-media {
+  float: center;
+}
+
+i {
+  padding-left: 20px;
+}
+
+//Content and footer:
+html,
+body {
+  height: 100%;
+}
+/*
+#page-content {
+  flex: 1 0 auto;
+}
+*/
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  flex-shrink: none;
+}
+
+#userlogged {
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: whitesmoke;
+  //background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+//Main title:
+#main-title {
+  color: whitesmoke;
+  font-family: 'Stardos Stencil', cursive;
+  text-shadow: 0 0 20px whitesmoke;
+  text-align: center;
+  font-size: 3.5em;
+}
+
+//Video header:
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  //min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+//

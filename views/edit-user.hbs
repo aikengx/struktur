@@ -1,0 +1,36 @@
+<h2>Edit User</h2>
+
+<form action="/user/update/{{hbsUser._id}}" method="POST" id="form-container">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" value="{{hbsUser.username}}" required>
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="*****" required>
+  <br><br>
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" value="{{hbsUser.name}}" required>
+  <br><br>
+  <label for="lname">Last Name</label>
+  <input id="lname" type="text" name="lname" value="{{hbsUser.lname}}" required>
+  <br><br>
+  <label for="email">email</label>
+  <input id="email" type="email" name="email" value="{{hbsUser.email}}" required>
+  <br><br>
+  <label for="phone">Phone</label>
+  <input id="phone" type="number" name="phone" value="{{hbsUser.phone}}">
+  <br><br>
+  <label for="company">Company</label>
+  <input id="company" type="text" name="company" value="{{hbsUser.company}}">
+  <br><br>
+  <label for="role">User Role</label>
+  <select id="role" name="role">
+    <option value="USER">USER</option>
+    <option value="ADMIN">ADMIN</option>
+  </select>
+  <br><br>
+  <button>Edit User</button>
+
+</form>
+<div>
+  Back to <a href="/users">users</a>
+</div>

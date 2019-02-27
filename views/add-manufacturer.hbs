@@ -1,0 +1,27 @@
+<h2>Add Manufacturer</h2>
+<br>
+<form action="/manufacturer/add" method="POST" id="form-container" enctype="multipart/form-data">
+  <label for="name">Manufacturer</label>
+  <input id="name" type="text" name="name" placeholder="Name" required>
+  <br><br>
+  <label for="website">URL</label>
+  <input id="website" type="url" name="website" placeholder="http://www.xyz.com" required>
+  <br><br>
+  <label for="logo">Upload logo</label>
+  <br>
+  <input id="logo" type="file" name="logo" required>
+  <br><br>
+  <div>
+  {{#if message}}
+    <div class="error-message">
+      <span id="message">{{ message }}</span>
+    </div>
+  {{/if}}
+  </div>
+  <br>
+  <button>Add Manufacturer</button>
+</form>
+<br>
+<div>
+  <p id="backhome">Back to <a href="/home">Home</a></p>
+</div>

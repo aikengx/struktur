@@ -1,0 +1,36 @@
+<h2>Register</h2>
+
+<form action="/signup" method="POST" id="form-container">
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="Your username" required>
+  <br><br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password" required>
+  <br><br>
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="Your name" required>
+  <br><br>
+  <label for="lname">Last Name</label>
+  <input id="lname" type="text" name="lname" placeholder="Your last name" required>
+  <br><br>
+  <label for="email">email</label>
+  <input id="email" type="email" name="email" placeholder="Your email" required>
+  <br><br>
+  <label for="phone">Phone</label>
+  <input id="phone" type="number" name="phone" placeholder="0123456789">
+  <br><br>
+  <label for="company">Company</label>
+  <input id="company" type="text" name="company" placeholder="Your company">
+  
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Create User</button>
+
+  <p class="account-message">
+    Do you already have an account?
+    <a href="/login">Login</a>
+  </p>
+</form>

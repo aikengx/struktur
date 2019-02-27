@@ -1,0 +1,17 @@
+<h2>Manufacturer Management</h2>
+<div>
+  {{#each hbsManufacturers}}
+  <img src="{{this.imgPath}}" alt="" height="auto" width="100">
+  <br><br>
+  <ul>
+    <li><strong>Name: </strong>{{this.name}}</li>
+    <li><strong>Website: </strong><a href="{{this.website}}">{{this.website}}</a></li>
+    <li><strong>Created by: </strong>{{this.created_by}}</li>
+  </ul>
+  <div>
+    <a href="/manufacturer/update/{{this._id}}">Edit</a> |
+    <a href="/manufacturer/delete/{{this._id}}">Delete</a>
+  </div>
+  <hr>
+  {{/each}}
+</div>

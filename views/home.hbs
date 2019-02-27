@@ -1,0 +1,137 @@
+<script>
+
+function calculateProject(a, b, c) {
+  if (parseFloat(c) > 90) {
+    alert("Permanent Link can not be over 90 meters!");
+  } else {
+    console.log(a, b, c);
+    var totalRuns = (parseInt(a) * parseInt(b));
+    console.log(totalRuns);
+    var averageRun = ((parseFloat(c) + 2 + 2 + 2) * 0.7).toFixed(2);
+    console.log(averageRun);
+    var totalCable = Math.ceil(((totalRuns * averageRun) / 305) * 1.2);
+    console.log(totalCable);
+    var racks = Math.ceil(totalRuns / 400);
+    document.getElementById('reels').value = totalCable;
+    document.getElementById('jacks').value = totalRuns * 2;
+    document.getElementById('patchc').value = totalRuns * 2;
+    document.getElementById('patchp1').value = Math.ceil(totalRuns / 24);
+    document.getElementById('patchp2').value = Math.ceil(totalRuns / 48);
+    document.getElementById('hcablem').value = Math.ceil(totalRuns / 24);
+    document.getElementById('rack').value = racks;
+    document.getElementById('vcablem').value = racks * 2;
+  }
+  
+};
+
+</script>
+
+<title>{{title}}</title>
+<h2>Home</h2>
+<div>
+  <h3>Welcome {{user.name}}</h3>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary"><a id="chgpass" href="/user/password/{{user.id}}"><i class="fas fa-key" title="Change Password"></i></a></button>
+  <button type="button" class="btn btn-secondary"><a id="logout" href="/logout"><i class="fas fa-lock" title="Log Out"></i></a></button>
+</div>
+<hr>
+<br>
+<div>
+  <a href="/manufacturer/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i> Add Manufacturer</button></a>
+</div>
+<br>
+<div>
+  <a href="/system/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i> Add System</button></a>
+</div>
+<br>
+<div>
+  <a href="/product/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i> Add Product</button></a>
+</div>
+<br>
+<div>
+  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal"><i class="fas fa-plus-circle"></i> Create Estimate</button>
+</div>
+<br>
+<div class="container">
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Create Estimate:</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <div class="form-inline">
+            <div class="input-prepend">
+              <label for="outlets">A</label>
+              <input class="span2" id="outlets" name="outlets" type="number" placeholder="# Outlets" required>
+            </div>
+            <div class="input-prepend">
+              <label for="outlets">B</label>
+              <input class="span2" id="services" name="services" type="number" placeholder="# Services / Outlet" required>
+            </div>
+            <div class="input-prepend">
+              <label for="outlets">C</label>
+              <input class="span2" id="cable" name="cable" type="number" placeholder="Longest Distance (m)" required>
+            </div>
+          </div>
+          <div><hr></div>
+          <div class="form-inline">
+            <div class="input-prepend">
+              <label for="reels">Cable Boxes</label>
+              <input class="span2" id="reels" name="reels" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">Modular Jacks</label>
+              <input class="span2" id="jacks" name="jacks" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">Patch Cords</label>
+              <input class="span2" id="patchc" name="patchc" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">Patch Panels (24)</label>
+              <input class="span2" id="patchp1" name="patchp1" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">Patch Panels (48)</label>
+              <input class="span2" id="patchp2" name="patchp2" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">H. Cable Managers</label>
+              <input class="span2" id="hcablem" name="hcablem" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">V. Cable Managers</label>
+              <input class="span2" id="vcablem" name="vcablem" type="text">
+            </div>
+            <div class="input-prepend">
+              <label for="">Racks</label>
+              <input class="span2" id="rack" name="rack" type="text">
+            </div>
+
+          </div>
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="btn-group" role="group" aria-label="button-group">
+            <button type="button" class="btn btn-secondary" onClick="calculateProject(outlets.value,services.value,cable.value)">Calculate</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

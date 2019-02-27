@@ -1,0 +1,33 @@
+<h2>Edit System</h2>
+<br>
+<form action="/system/update/{{hbsSystem._id}}" method="POST" id="form-container">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="Name" value="{{hbsSystem.name}}" required>
+  <br><br>
+  <label for="description">Description</label>
+  <br>
+  <textarea rows="3" cols="50" id="description" type="text" name="description" placeholder="System Description" required>{{hbsSystem.description}}</textarea>
+  <!--<input id="description" type="text" name="description" placeholder="System Description" required>-->
+  <br><br>
+  <label for="manufacturer">Manufacturer</label>
+  <br>
+  <select id="manufacturer" name="manufacturer" required>
+    {{#each list}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <br><br>
+  <div>
+  {{#if message}}
+    <div class="error-message">
+      <span id="message">{{ message }}</span>
+    </div>
+  {{/if}}
+  </div>
+  <br>
+  <button>Edit System</button>
+</form>
+<br>
+<div>
+  <p id="backhome">Back to <a href="/home">Home</a></p>
+</div>

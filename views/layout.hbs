@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+    <!--
+    <a class="navbar-brand" href="#">
+          <img src="http://placehold.it/150x50?text=Logo" alt="">
+    </a>
+    -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Index
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manufacturers</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a href="https://www.belden.com/" class="dropdown-item">Belden</a>
+              <a href="https://www.panduit.com/" class="dropdown-item">Panduit</a>
+              <a href="https://www.siemon.com/" class="dropdown-item">Siemon</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a href="https://catalog.belden.com/" class="dropdown-item">Belden eCatalog</a>
+              <a href="https://www.youtube.com/user/beldenvid" class="dropdown-item">Belden Youtube Channel</a>
+              <a href="https://www.panduit.com/en/landing-pages/iai-online-product-catalog.html" class="dropdown-item">Panduit Online Product Catalog</a>
+              <a href="https://www.youtube.com/user/PanduitVideos" class="dropdown-item">Panduit Youtube Channel</a>
+              <a href="https://www.siemon.com/en/home/products/e-catalog" class="dropdown-item">Siemon E-catalog</a>
+              <a href="https://www.youtube.com/user/SiemonNetworkCabling" class="dropdown-item">Siemon Youtube Channel</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Partners/Distributors</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#">Contractors</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#">Clients</a>
+          </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Management</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a href="/inventory" class="dropdown-item">Inventory</a>
+              <a href="/manufacturers" class="dropdown-item">Manufacturers</a>
+              <a href="/systems" class="dropdown-item">Systems</a>
+              <a href="/products" class="dropdown-item">Products</a>
+              <a href="/projects" class="dropdown-item">Projects</a>
+              <a href="/users" class="dropdown-item">Users</a>
+            </div>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Access</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <!--<a href="/home" class="dropdown-item">User Home</a>-->
+              <a href="/login" class="dropdown-item">Login / Logout</a>
+              <a href="/signup" class="dropdown-item">Register</a>
+              <!--<a class="dropdown-item" href="/login" data-toggle="modal" data-target="#login-modal">Sign In</a>
+              <a class="dropdown-item" href="#">Register</a>-->
+            </div>
+          </li>
+          <div>
+            <li class="nav-item">
+              <!--<i class="fas fa-user-circle" style="color: whitesmoke;"><span id="userlogged"> {{user.username}}</span></i>-->
+              <a href="/home" title="{{user.username}}'s Home"><i class="fas fa-user-circle" style="color: whitesmoke;"><span id="userlogged"> {{user.username}}</span></i></a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="content">
+    {{{body}}}
+  </div>
+
+
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center" id="social-media">
+      <i class="fab fa-instagram fa-lg"></i>
+      <i class="fab fa-twitter fa-lg"></i>
+      <i class="fab fa-facebook fa-lg"></i>
+      <i class="fab fa-linkedin fa-lg"></i>
+      <i class="fab fa-slack fa-lg"></i>
+      <span id="datetime"></span>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/javascripts/script.js"></script>
+</body>
+</html>

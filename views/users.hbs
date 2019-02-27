@@ -1,0 +1,19 @@
+<h2>User Management</h2>
+<div>
+  {{#each hbsUsers}}
+  <ul>
+    <li><strong>Username: </strong>{{this.username}}</li>
+    <li><strong>Name: </strong>{{this.name}}</li>
+    <li><strong>Last Name: </strong>{{this.lname}}</li>
+    <li><strong>email: </strong>{{this.email}}</li>
+    <li><strong>Phone: </strong>{{this.phone}}</li>
+    <li><strong>Company: </strong>{{this.company}}</li>
+    <li><strong>Role: </strong>{{this.role}}</li> 
+  </ul>
+  <div>
+    <a href="/user/update/{{this._id}}">Edit</a> |
+    <a href="/user/delete/{{this._id}}">Delete</a>
+  </div>
+  <hr>
+  {{/each}}
+</div>

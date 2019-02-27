@@ -1,10 +1,17 @@
+require('dotenv').config()
+//
 const mongoose = require('mongoose');
 const System = require('../models/system');
 //
-const dbName = 'struktur';
-mongoose.connect(`mongodb://localhost/${dbName}`, {useNewUrlParser: true});
+const dbName = process.env.MONGODB_DB;
+const dbUser = process.env.MONGODB_USER;
+const dbPass = process.env.MONGODB_PASS;
+const dbUrl = process.env.MONGODB_URL;
 //
-System.collection.drop()
+//mongoose.connect(`mongodb://localhost/${dbName}`, {useNewUrlParser: true});
+mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@${dbUrl}/${dbName}?retryWrites=true`, { useNewUrlParser: true });
+//
+System.collection.drop();
 //
 const systems = [
   {

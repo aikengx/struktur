@@ -124,6 +124,23 @@ a {
   //align-items: center; 
 }
 
+
+#user-created-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  //background: url('../images/imgix-391813-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+  font-family: 'Stardos Stencil', cursive;
+  border: 2px solid #343a40;
+}
+
 #product-box {
   display: flex;
   justify-content: center;
@@ -403,7 +420,7 @@ body {
 }
 */
 #sticky-footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   flex-shrink: none;

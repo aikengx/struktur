@@ -108,6 +108,19 @@ a {
   text-align: center;
   font-size: 3.5em; }
 
+#user-created-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  font-family: 'Stardos Stencil', cursive;
+  border: 2px solid #343a40; }
+
 #product-box {
   display: flex;
   justify-content: center;
@@ -334,7 +347,7 @@ body {
 }
 */
 #sticky-footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   flex-shrink: none; }

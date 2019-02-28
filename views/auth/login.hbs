@@ -1,34 +1,51 @@
+
+
 {{#if user}}
-<div>
-  <h2>Log Out</h2>
-</div>
-<form action="/logout">
+
+<div id="logout-box">  
   <div>
-    <input type="submit" value="Logout">
+    <h4>Log Out?</h4>
+    <a href="/logout"><i class="fas fa-sign-out-alt fa-2x" style="color: red"></i></a>
+    <!--
+    <form action="/logout">
+    <div>
+      <input type="submit" value="Logout">
+    </div>
+    </form>
+    -->
   </div>
-</form>
-{{else}}
-<div>
-<h2>Log In</h2>
 </div>
+
+{{else}}
+<!--<div style="width:400px; margin: 10px auto 0 auto; border:1px solid #000; text-align:center">-->
+<div id="login-box">
+<div>
 <form action="/login" method="POST">
   <div>
     <label for="username">Username:</label>
-    <input type="text" name="username" value="admin">
+    <input type="text" name="username" value="admin" size="25px">
   </div>
+  <br>
   <div>
     <label for="password">Password:</label>
-    <input type="password" name="password" value="admin">
+    <input type="password" name="password" value="admin" size="26px">
   </div>
+  <br>
   {{#if message}}
     <div class="error-message">{{ message }}</div>
   {{/if}}
   <div>
-    <input type="submit" value="Log In">
+    <br>
+    <input id="loginbutton" type="submit" value="Log In">
   </div>
+  <br>
     <p class="account-message">
     Don't have an account?
     <a href="/signup">Register</a>
   </p>
 </form>
+</div>
+</div>
+
+
 {{/if}}

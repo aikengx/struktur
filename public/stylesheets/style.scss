@@ -11,10 +11,266 @@ a {
 */
 /*
 .navbar {
-  margin-top: 5vh;
+  position: fixed;
+  width: 100%;
 }
 */
-#backhome {
+
+.newsletter {
+  //padding: 80px 0;
+  //background: #19beda;
+  background: black;
+  }
+  
+  .newsletter .content {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  z-index: 2; }
+  .newsletter .content h2 {
+  color: #243c4f;
+  margin-bottom: 20px; }
+  .newsletter .content .form-control {
+  height: 50px;
+  border-color: #ffffff;
+  border-radius: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  }
+  .newsletter .content.form-control:focus {
+  box-shadow: none;
+  //@extendborder: 2px solid #243c4f;
+  }
+  .newsletter .content .btn {
+  min-height: 50px; 
+  border-radius:25px;
+  background: #343a40;
+  color: darkgray;
+  font-weight:600;
+  position: absolute;
+  top: 0;
+  right: 0;
+  }
+/*
+*/
+.input-prepend > input {
+  text-align: center;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: space-evenly; 
+}
+
+.user-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  //border: 2px solid #343a40;
+  //box-shadow: inset 0 0 10px whitesmoke;
+  height: 88vh;
+  background: url('../images/jordan-harrison-1208586-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+.user-card {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  border: 2px solid #343a40;
+  box-shadow: inset 0 0 20px dimgray;
+  background: gainsboro;
+  height: 40%;
+  padding-bottom: 10px;
+}
+
+.modal-header {
+  background: gray;
+  color: whitesmoke;
+  font-family: 'Stardos Stencil', cursive;
+  //text-shadow: 0 0 10px whitesmoke;
+  text-align: center;
+  font-size: 3.5em;
+  margin: auto;
+  width: 100%;
+}
+
+.modal-footer {
+  background: gray;
+}
+
+#latest-news {
+  color: gray;
+  font-style: italic;
+}
+
+#home-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #343A40;
+  font-family: 'Stardos Stencil', cursive;
+  text-shadow: 0 0 20px whitesmoke;
+  text-align: center;
+  font-size: 3.5em; 
+  //align-items: center; 
+}
+
+#password-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/thomas-jensen-592813-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+#password-box > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  color: #00FF41;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #3a3a3a;
+  //opacity: 0.4;
+}
+
+#register-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/imgix-391813-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+#register-box > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  color: #00FF41;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #3a3a3a;
+  //opacity: 0.4;
+}
+
+#form-container > input {
+  float: right;
+}
+
+#home-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/thomas-jensen-602189-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;  
+}
+
+#home-controls > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  //color: #00FF41;
+  //align-items: center;
+  //justify-content: center;
+  display: flex;
+  background: #3a3a3a;
+  //opacity: 0.4;
+}
+
+#logout-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/clem-onojeghuo-705790-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+#logout-box > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  color: red;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: gainsboro;
+  //opacity: 0.4;
+}
+
+#login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/business-cabinet-data-325229.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+#login-box > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  color: #00FF41;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #3a3a3a;
+  //opacity: 0.4;
+}
+
+#registerbutton {
+  width: 300px; 
+}
+
+#loginbutton {
+  width: 300px;
+}
+
+#passwordbutton {
+  width: 330px;
+}
+
+ #backhome {
   font-size: 0.8rem;
 }
 
@@ -30,6 +286,7 @@ a {
 #content {
   //max-height: 90vh;
   flex: 1 0 auto;
+  //height: 100%;
 }
 
 #datetime {
@@ -48,7 +305,7 @@ i {
 //Content and footer:
 html,
 body {
-  height: 100%;
+  height: 85%;
 }
 /*
 #page-content {

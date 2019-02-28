@@ -27,32 +27,52 @@ function calculateProject(a, b, c) {
 </script>
 
 <title>{{title}}</title>
-<h2>Home</h2>
+<div id="home-title">
 <div>
-  <h3>Welcome {{user.name}}</h3>
+  <h1>Welcome {{user.name}}</h1>
 </div>
-<div class="btn-group" role="group" aria-label="Basic example">
+<div class="btn-group" role="group" aria-label="Basic example" id="button-controls">
   <button type="button" class="btn btn-secondary"><a id="chgpass" href="/user/password/{{user.id}}"><i class="fas fa-key" title="Change Password"></i></a></button>
-  <button type="button" class="btn btn-secondary"><a id="logout" href="/logout"><i class="fas fa-lock" title="Log Out"></i></a></button>
+  <button type="button" class="btn btn-secondary"><a id="logout" href="/logout"><i class="fas fa-lock" title="Express Log Out"></i></a></button>
 </div>
-<hr>
+</div>
+
+<div id="home-controls">
+<div>
 <br>
 <div>
-  <a href="/manufacturer/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i> Add Manufacturer</button></a>
-</div>
-<br>
-<div>
-  <a href="/system/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i> Add System</button></a>
-</div>
-<br>
-<div>
-  <a href="/product/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i> Add Product</button></a>
+  <a href="/manufacturer/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Add Manufacturer</button></a>
 </div>
 <br>
 <div>
-  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal"><i class="fas fa-plus-circle"></i> Create Estimate</button>
+  <a href="/system/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Add System</button></a>
 </div>
 <br>
+<div>
+  <a href="/product/add"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Add Product</button></a>
+</div>
+<br>
+<div>
+  <a href="#"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Add Distributor</button></a>
+</div>
+<br>
+<div>
+  <a href="#"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Add Contractor</button></a>
+</div>
+<br>
+<div>
+  <a href="#"><button type="button" class="btn btn-dark"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Add Client</button></a>
+</div>
+<br>
+<div>
+  <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#myModal"><i class="fas fa-plus-circle"></i>&nbsp;&nbsp;Create Estimate</button>
+</div>
+<br>
+</div>
+</div>
+
+
+
 <div class="container">
 
   <!-- The Modal -->
@@ -62,7 +82,7 @@ function calculateProject(a, b, c) {
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h5 class="modal-title">Create Estimate:</h5>
+          <h1 class="modal-title">CREATE ESTIMATE</h1>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -125,8 +145,8 @@ function calculateProject(a, b, c) {
         <!-- Modal footer -->
         <div class="modal-footer">
           <div class="btn-group" role="group" aria-label="button-group">
-            <button type="button" class="btn btn-secondary" onClick="calculateProject(outlets.value,services.value,cable.value)">Calculate</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" onClick="calculateProject(outlets.value,services.value,cable.value)">Calculate</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
           </div>
         </div>
 

@@ -1,6 +1,19 @@
-<h2>User Management</h2>
+<div id="home-title">
 <div>
+  <h1>User Management</h1>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example" id="button-controls">
+  <button type="button" class="btn btn-secondary"><a id="chgpass" href="/user/password/{{user.id}}"><i class="fas fa-key" title="Change Password"></i></a></button>
+  <button type="button" class="btn btn-secondary"><a id="logout" href="/logout"><i class="fas fa-lock" title="Express Log Out"></i></a></button>
+</div>
+</div>
+
+  <div class="user-container">
   {{#each hbsUsers}}
+  <div class="user-card">
+    <br>
+  <i class="fas fa-user-alt fa-3x"></i>
+  <br>
   <ul>
     <li><strong>Username: </strong>{{this.username}}</li>
     <li><strong>Name: </strong>{{this.name}}</li>
@@ -11,9 +24,10 @@
     <li><strong>Role: </strong>{{this.role}}</li> 
   </ul>
   <div>
-    <a href="/user/update/{{this._id}}">Edit</a> |
-    <a href="/user/delete/{{this._id}}">Delete</a>
+    <a href="/user/update/{{this._id}}"><i class="fas fa-edit" title="Edit User" style="color: black;"></i></a>
+    <a href="/user/delete/{{this._id}}"><i class="fas fa-trash-alt" title="Delete User" style="color: black;"></i></a>
+    <br>
   </div>
-  <hr>
+  </div>
   {{/each}}
 </div>

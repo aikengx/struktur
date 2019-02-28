@@ -1,6 +1,8 @@
-<h2>Edit User</h2>
-
+<div id="register-box">
+  <div>
 <form action="/user/update/{{hbsUser._id}}" method="POST" id="form-container">
+<h2>Edit User</h2>
+<br>
   <label for="username">Username</label>
   <input id="username" type="text" name="username" value="{{hbsUser.username}}" required>
   <br><br>
@@ -28,9 +30,17 @@
     <option value="ADMIN">ADMIN</option>
   </select>
   <br><br>
-  <button>Edit User</button>
-
-</form>
+  <button style="width: 300px">Edit User</button>
+<br><br>
 <div>
-  Back to <a href="/users">users</a>
+  Back to <a href="/users">Users</a>
 </div>
+</form>
+  </div>
+</div>
+
+
+
+
+
+

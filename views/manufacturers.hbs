@@ -1,6 +1,16 @@
-<h2>Manufacturer Management</h2>
+<div id="home-title">
 <div>
+  <h1>Manufacturer Management:</h1>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example" id="button-controls">
+  <button type="button" class="btn btn-secondary"><a id="chgpass" href="/user/password/{{user.id}}"><i class="fas fa-key" title="Change Password"></i></a></button>
+  <button type="button" class="btn btn-secondary"><a id="logout" href="/logout"><i class="fas fa-lock" title="Express Log Out"></i></a></button>
+</div>
+</div>
+
+  <div class="user-container">
   {{#each hbsManufacturers}}
+  <div class="user-card">
   <img src="{{this.imgPath}}" alt="" height="auto" width="100">
   <br><br>
   <ul>
@@ -9,9 +19,10 @@
     <li><strong>Created by: </strong>{{this.created_by}}</li>
   </ul>
   <div>
-    <a href="/manufacturer/update/{{this._id}}">Edit</a> |
-    <a href="/manufacturer/delete/{{this._id}}">Delete</a>
+    <a href="/manufacturer/update/{{this._id}}"><i class="fas fa-edit" title="Edit Manufacturer" style="color: black;"></i></a>
+    <a href="/manufacturer/delete/{{this._id}}"><i class="fas fa-trash-alt" title="Delete Manufacturer" style="color: black;"></i></a>
+    <br>
   </div>
-  <hr>
+  </div>
   {{/each}}
 </div>

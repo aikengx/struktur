@@ -1,6 +1,8 @@
-<h2>Edit System</h2>
-<br>
+<div id="edit-system">
+  <div>
 <form action="/system/update/{{hbsSystem._id}}" method="POST" id="form-container">
+  <h2>Edit System</h2>
+<br>
   <label for="name">Name</label>
   <input id="name" type="text" name="name" placeholder="Name" value="{{hbsSystem.name}}" required>
   <br><br>
@@ -25,9 +27,14 @@
   {{/if}}
   </div>
   <br>
-  <button>Edit System</button>
-</form>
-<br>
+  <button style="width: 420px;">Edit System</button>
+  <br>
 <div>
+  <br>
   <p id="backhome">Back to <a href="/home">Home</a></p>
 </div>
+</form>
+  </div>
+</div>
+
+

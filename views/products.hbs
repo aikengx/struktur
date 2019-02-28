@@ -1,20 +1,33 @@
-<h2>Product Management</h2>
+<div id="home-title">
 <div>
+  <h1>Product Management:</h1>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example" id="button-controls">
+  <button type="button" class="btn btn-secondary"><a id="chgpass" href="/user/password/{{user.id}}"><i class="fas fa-key" title="Change Password"></i></a></button>
+  <button type="button" class="btn btn-secondary"><a id="logout" href="/logout"><i class="fas fa-lock" title="Express Log Out"></i></a></button>
+</div>
+</div>
+
+  <div class="product-container">
   {{#each hbsProducts}}
+  <div class="product-card">
+  <img src="{{this.imgUrl}}" alt="{{this.name}}" title="{{this.name}}" height="auto" width="100">
+   <div>
+    <a href="/product/update/{{this._id}}"><i class="fas fa-edit" title="Edit => {{this.name}}" style="color: slategray;"></i></a>
+    <a href="/product/delete/{{this._id}}"><i class="fas fa-trash-alt" title="Delete => {{this.name}}" style="color: slategray;"></i></a>
+  </div>
+  <br>
   <ul>
     <li><strong>Name: </strong>{{this.name}}</li>
     <li><strong>Description: </strong>{{this.description}}</li>
     <li><strong>System: </strong><em>{{this.system}}</em></li>
-    <li><strong>URL: </strong><em>{{this.url}}</em></li> 
+    <li><strong>URL: </strong><a href="{{this.url}}"><em>{{this.url}}</em></a></li> 
     <li><strong>Image: </strong><em>{{this.imgUrl}}</em></li> 
     <li><strong>Part Number: </strong><em>{{this.part_number}}</em></li> 
     <li><strong>Description: </strong><em>{{this.description}}</em></li> 
     <li><strong>Created by: </strong>{{this.created_by}}</li>
   </ul>
-  <div>
-    <a href="/product/update/{{this._id}}">Edit</a> |
-    <a href="/product/delete/{{this._id}}">Delete</a>
+ 
   </div>
-  <hr>
   {{/each}}
 </div>

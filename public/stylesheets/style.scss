@@ -24,7 +24,7 @@ a {
   
   .newsletter .content {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 25px auto;
   text-align: center;
   position: relative;
   z-index: 2; }
@@ -32,7 +32,7 @@ a {
   color: #243c4f;
   margin-bottom: 20px; }
   .newsletter .content .form-control {
-  height: 50px;
+  height: 30px;
   border-color: #ffffff;
   border-radius: 25px;
   width: 100%;
@@ -43,14 +43,18 @@ a {
   //@extendborder: 2px solid #243c4f;
   }
   .newsletter .content .btn {
-  min-height: 50px; 
+  min-height: 20px; 
   border-radius:25px;
+  border: 2px solid #343a40;
   background: #343a40;
   color: darkgray;
   font-weight:600;
   position: absolute;
   top: 0;
   right: 0;
+  height: 30px;
+  //width: 150px;
+  align-items: center;
   }
 /*
 */
@@ -61,6 +65,66 @@ a {
 .form-inline {
   display: flex;
   justify-content: space-evenly; 
+}
+
+.system-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  //border: 2px solid #343a40;
+  //box-shadow: inset 0 0 10px whitesmoke;
+  height: 88vh;
+  background: gainsboro;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+.system-card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  //margin-top: 5%;
+  border: 2px solid #343a40;
+  box-shadow: inset 0 0 20px dimgray;
+  background: gainsboro;
+  //height: 40%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.product-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  //border: 2px solid #343a40;
+  //box-shadow: inset 0 0 10px whitesmoke;
+  height: 88vh;
+  background: gainsboro;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+.product-card {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  //margin-top: 5%;
+  border: 2px solid #343a40;
+  box-shadow: inset 0 0 20px dimgray;
+  background: gainsboro;
+  //height: 40%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .user-container{
@@ -79,7 +143,7 @@ a {
 }
 
 .user-card {
-  width: 15%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,6 +170,60 @@ a {
 .modal-footer {
   background: gray;
 }
+
+#edit-user {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/franck-v-739401-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+#edit-user > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  color: #00FF41;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: grey;
+  //opacity: 0.4;
+}
+
+
+#edit-manufacturer, #edit-product, #edit-system {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  //border:1px solid whitesmoke;
+  height: 88vh;
+  background: url('../images/franck-v-739401-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
+#edit-manufacturer > div, #edit-product > div, #edit-system > div {
+  border: 2px solid #343a40;
+  padding: 30px;
+  box-shadow: inset 0 0 10px whitesmoke;
+  color: #00FF41;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: grey;
+  //opacity: 0.4;
+}
+
 
 #latest-news {
   color: gray;
@@ -420,7 +538,7 @@ body {
 }
 */
 #sticky-footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   flex-shrink: none;

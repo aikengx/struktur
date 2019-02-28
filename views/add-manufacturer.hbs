@@ -1,6 +1,9 @@
+<div id="manufacturer-box">
+  <div>
+
+<form action="/manufacturer/add" method="POST" id="form-container" enctype="multipart/form-data">
 <h2>Add Manufacturer</h2>
 <br>
-<form action="/manufacturer/add" method="POST" id="form-container" enctype="multipart/form-data">
   <label for="name">Manufacturer</label>
   <input id="name" type="text" name="name" placeholder="Name" required>
   <br><br>
@@ -8,7 +11,7 @@
   <input id="website" type="url" name="website" placeholder="http://www.xyz.com" required>
   <br><br>
   <label for="logo">Upload logo</label>
-  <br>
+  <br><br>
   <input id="logo" type="file" name="logo" required>
   <br><br>
   <div>
@@ -19,9 +22,13 @@
   {{/if}}
   </div>
   <br>
-  <button>Add Manufacturer</button>
-</form>
-<br>
+  <button id="manufacturerbutton">Add Manufacturer</button>
+  <br><br>
 <div>
   <p id="backhome">Back to <a href="/home">Home</a></p>
 </div>
+</form>
+
+  </div>
+</div>
+

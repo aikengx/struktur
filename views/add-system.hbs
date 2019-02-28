@@ -1,12 +1,14 @@
+<div id="system-box">
+  <div>
+<form action="/system/add" method="POST" id="form-container">
 <h2>Add System</h2>
 <br>
-<form action="/system/add" method="POST" id="form-container">
   <label for="name">Name</label>
   <input id="name" type="text" name="name" placeholder="Name" required>
   <br><br>
   <label for="description">Description</label>
   <br>
-  <textarea rows="3" cols="50" id="description" type="text" name="description" placeholder="System Description" required></textarea>
+  <textarea rows="4" cols="30" id="description" type="text" name="description" placeholder="System Description" required></textarea>
   <!--<input id="description" type="text" name="description" placeholder="System Description" required>-->
   <br><br>
   <label for="manufacturer">Manufacturer</label>
@@ -25,9 +27,14 @@
   {{/if}}
   </div>
   <br>
-  <button>Add System</button>
-</form>
-<br>
+  <button id="systembutton">Add System</button>
+  <br><br>
 <div>
   <p id="backhome">Back to <a href="/home">Home</a></p>
 </div>
+</form>
+
+  </div>
+</div>
+
+

@@ -1,12 +1,13 @@
-
+<div id="product-box">
+  <div>
+    
+<form action="/product/add" method="POST" id="form-container">
 <h2>Add Product</h2>
 <br>
-<form action="/product/add" method="POST" id="form-container">
   <label for="name">Name</label>
   <input id="name" type="text" name="name" placeholder="Product Name" size="45" required>
   <br><br>
   <label for="manufacturer">Manufacturer</label>
-  <br>
   <select id="manufacturer" name="manufacturer" onchange="populate(this.id)" required>
     {{#each list}}
     <option value="{{this.name}}">{{this.name}}</option>
@@ -14,7 +15,6 @@
   </select>
   <br><br>
   <label for="system">System</label>
-  <br>
   <select id="system" name="system" required>
     {{#each list2}}
     <option value="{{this.name}}">{{this.name}}</option>
@@ -34,18 +34,20 @@
   <br>
   <textarea rows="3" cols="50" id="description" type="text" name="description" placeholder="Product Description" required></textarea>
   <br><br>
-  </div>
+  <div>
   {{#if message}}
     <div class="error-message">{{ message }}</div>
   {{/if}}
-  <div>
-  <button>Add Product</button>
-</form>
-<br><br>
+  </div>
+  <button id="productbutton">Add Product</button>
+  <br><br>
 <div>
   <p id="backhome">Back to <a href="/home">Home</a></p>
 </div>
+</form>
 
+  </div>
+</div>
 
 
 <script>

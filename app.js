@@ -29,8 +29,8 @@ hbs.registerHelper('json', function(context) {
 //
 mongoose.Promise = Promise;
 mongoose
-  //.connect(`mongodb+srv://${dbUser}:${dbPass}@${dbUrl}/${dbName}?retryWrites=true`, { useNewUrlParser: true })
-  .connect('mongodb://localhost/struktur', {useNewUrlParser: true})
+  .connect(`mongodb+srv://${dbUser}:${dbPass}@${dbUrl}/${dbName}?retryWrites=true`, { useNewUrlParser: true })
+  //.connect('mongodb://localhost/struktur', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

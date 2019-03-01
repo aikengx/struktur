@@ -27,10 +27,13 @@
   <input id="company" type="text" name="company" placeholder="Your company">
 
   {{#if message}}
-    <div class="error-message">{{ message }}</div>
+    <div class="error-message">
+      <br>
+      {{ message }}
+    </div>
   {{/if}}
 
-  <br><br>
+  <br>
   <div>
     <br>
 <button id="registerbutton">Create User</button>

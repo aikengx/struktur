@@ -12,6 +12,7 @@
   {{#each hbsProducts}}
   <div class="product-card">
   <img src="{{this.imgUrl}}" alt="{{this.name}}" title="{{this.name}}" height="auto" width="100">
+  <strong>Manufacturer: </strong>{{this.manufacturer}}
    <div>
     <a href="/product/update/{{this._id}}"><i class="fas fa-edit" title="Edit => {{this.name}}" style="color: slategray;"></i></a>
     <a href="/product/delete/{{this._id}}"><i class="fas fa-trash-alt" title="Delete => {{this.name}}" style="color: slategray;"></i></a>

@@ -171,6 +171,16 @@ a {
   background: gray;
 }
 
+#forbidden {
+  height: 88vh;
+  background: url('../images/kyle-glenn-629501-unsplash.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; 
+}
+
 #edit-user {
   display: flex;
   justify-content: center;
@@ -270,7 +280,7 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  position: relative; 
+  position: relative;
 }
 
 #product-box > div {
@@ -282,6 +292,7 @@ a {
   justify-content: center;
   display: flex;
   background: #3a3a3a;
+  
   //opacity: 0.4;
 }
 

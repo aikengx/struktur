@@ -1,6 +1,6 @@
 <div id="edit-product">
   <div>
-<form action="/product/add" method="POST" id="form-container">
+<form action="/product/update/{{hbsProduct.id}}" method="POST" id="form-container">
 <h2>Edit Product</h2>
 <br>
   <label for="name">Name</label>
@@ -39,7 +39,7 @@
     <br>
   <button style="width: 420px">Edit Product</button>
 <br><br>
-  <p id="backhome">Back to <a href="/products">Products</a></p>
+  <p id="backhome">Back to <a href="/home">Home</a></p>
   
 </form>
   </div>

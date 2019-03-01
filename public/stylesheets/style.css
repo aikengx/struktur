@@ -145,6 +145,15 @@ a {
 .modal-footer {
   background: gray; }
 
+#forbidden {
+  height: 88vh;
+  background: url("../images/kyle-glenn-629501-unsplash.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative; }
+
 #edit-user {
   display: flex;
   justify-content: center;

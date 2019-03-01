@@ -493,7 +493,7 @@ authRoutes.get("/system/update/:id", ensureLogin.ensureLoggedIn(), (req, res) =>
   System.findOne({'_id': req.params.id})
   .then(dbSystem => {
     //console.log(dbSystem);
-    //console.log(dbList);
+    console.log(dbList);
     res.render("edit-system", {
       hbsSystem: dbSystem, 
       title: 'Struktur - Edit System',
@@ -528,7 +528,7 @@ authRoutes.get("/system/delete/:id", ensureLogin.ensureLoggedIn(), (req, res) =>
   .then(() => {
     //console.log(dbUser);
     res.render("resource-deleted", { 
-      message: "Manufacturer succesfully removed",
+      message: "System succesfully removed",
       title: 'Struktur - System Deleted',
       user: req.user
     });
@@ -614,7 +614,7 @@ authRoutes.post("/product/add", ensureLogin.ensureLoggedIn(), (req,res) => {
               res.render("add-product", { 
               //message: "Manufacturer succesfully removed",
               title: 'Struktur - Add Product',
-              message: "System succesfully created",
+              message: "Product succesfully created",
               user: req.user,
               list: dbList,
               list2: dbList2
@@ -703,6 +703,23 @@ authRoutes.get("/product/update/:id", ensureLogin.ensureLoggedIn(), (req, res) =
     .catch(err => {
       console.log(err);
     })
+  })
+  .catch(err => {
+    console.log(err);
+  })
+})
+//
+authRoutes.post("/product/update/:id", ensureLogin.ensureLoggedIn(), (req, res) => {
+  console.log(req.body, req.params, req.query);
+  Product.updateOne({'_id': req.params.id}, { $set: req.body } )
+  .then((dbProduct) => {
+    //console.log(dbUser);
+    //console.log(dbUser);
+    res.render("resource-deleted", { 
+      message: "Product succesfully edited",
+      title: 'Struktur - Product Edited',
+      user: req.user
+    });
   })
   .catch(err => {
     console.log(err);
